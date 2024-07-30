@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace IWayCsTraining
 {
-    class Car
+    [Serializable]
+    public class Car
     {
-        //constructor
+        //parameter-less contructor
+        public Car()
+        {
+
+        }
+
+        //parameterized constructor
         public Car(string clr, string mdl, int tpSpd, int numDoors)
         {
             Color = clr;

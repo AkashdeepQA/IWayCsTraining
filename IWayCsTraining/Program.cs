@@ -500,19 +500,29 @@ namespace IWayCsTraining
             //Collections.HighestFrequencyElement(nums);
 
 
-            string filePathWithName = @"D:\TrainingFiles\firstFile.txt";
-            //FileHandling.CreateFile(filePathWithName);
+            //string filePathWithName = @"D:\TrainingFiles\firstFile.txt";
+            ////FileHandling.CreateFile(filePathWithName);
 
-            string content = "Hi There,\nWe are Studying C#.\nAnkit, Swale and Ariba are in the class today.\nAkashdeep is teaching";
-            FileHandling.WriteToFile(filePathWithName, content);
-            FileHandling.AppendToFile(filePathWithName, "\nShivam is absent today");
-            FileHandling.AppendToFile(filePathWithName, "\nShiva is absent today");
-            FileHandling.AppendToFile(filePathWithName, "\nYash is absent today");
+            //string content = "Hi There,\nWe are Studying C#.\nAnkit, Swale and Ariba are in the class today.\nAkashdeep is teaching";
+            //FileHandling.WriteToFile(filePathWithName, content);
+            //FileHandling.AppendToFile(filePathWithName, "\nShivam is absent today");
+            //FileHandling.AppendToFile(filePathWithName, "\nShiva is absent today");
+            //FileHandling.AppendToFile(filePathWithName, "\nYash is absent today");
 
-            Console.WriteLine(FileHandling.ReadFromFile(filePathWithName));
+            //Console.WriteLine(FileHandling.ReadFromFile(filePathWithName));
 
+            string filePathWithName = @"D:\TrainingFiles\binaryFile.txt";
+            string xmlFilePathWithName = @"D:\TrainingFiles\xmlFile.xml";
+            Car car1 = new Car("Blue", "Honda City", 320, 4);
 
+            //Serialization.BinarySerialization(car1, filePathWithName);
+            //Car car2 = Serialization.BinaryDeserialization(filePathWithName);
+            //car2.PrintDetails();
 
+            //Serialization.XmlSerializationDeserialization();
+
+            Serialization.JsonSerializationDeserialization();
+            
             Console.ReadKey();
         }
 
