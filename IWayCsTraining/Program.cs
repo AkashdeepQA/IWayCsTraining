@@ -511,9 +511,9 @@ namespace IWayCsTraining
 
             //Console.WriteLine(FileHandling.ReadFromFile(filePathWithName));
 
-            string filePathWithName = @"D:\TrainingFiles\binaryFile.txt";
-            string xmlFilePathWithName = @"D:\TrainingFiles\xmlFile.xml";
-            Car car1 = new Car("Blue", "Honda City", 320, 4);
+            //string filePathWithName = @"D:\TrainingFiles\binaryFile.txt";
+            //string xmlFilePathWithName = @"D:\TrainingFiles\xmlFile.xml";
+            //Car car1 = new Car("Blue", "Honda City", 320, 4);
 
             //Serialization.BinarySerialization(car1, filePathWithName);
             //Car car2 = Serialization.BinaryDeserialization(filePathWithName);
@@ -521,8 +521,24 @@ namespace IWayCsTraining
 
             //Serialization.XmlSerializationDeserialization();
 
-            Serialization.JsonSerializationDeserialization();
-            
+            //Serialization.JsonSerializationDeserialization();
+
+            //File.Create(@"D:\TrainingFiles\Today\newFile.txt");
+
+            //string fileContent = "Hi, \nThis is a file that is created using c#.\nThis is just another line of text.";
+
+            //File.WriteAllText(@"D:\TrainingFiles\Today\newFile.txt", fileContent);
+
+            //string appendContent = "\n\nThis content is getting appended to the existing one by File.AppendAllText() method";
+            //File.AppendAllText(@"D:\TrainingFiles\Today\newFile.txt", appendContent);
+
+            //string readContent = File.ReadAllText(@"D:\TrainingFiles\Today\newFile.txt");
+            //Console.WriteLine(readContent);
+
+            //File.Delete(@"D:\TrainingFiles\Today\newFile.txt");
+
+            AsyncProgramming.SchoolDay();
+
             Console.ReadKey();
         }
 

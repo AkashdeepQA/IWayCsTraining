@@ -20,6 +20,11 @@ namespace IWayCsTraining
                 Console.WriteLine("File was not created");
         }
 
+        public static void CreateFileSimple()
+        {
+            File.Create(@"D:\TrainingFiles\Today\newFile.txt");
+        }
+
         public static void OpenFile(string fileNamePath, string textToBeWritten)
         {
             FileStream fs = File.Open(fileNamePath, FileMode.Open);
