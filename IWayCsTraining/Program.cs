@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Collections;
 using System.IO;
 using System.Threading;
+using System.Net.Http;
 
 namespace IWayCsTraining
 {
@@ -14,7 +15,43 @@ namespace IWayCsTraining
         const double pi = 3.14;
         static void Main(string[] args)
         {
+            // Hardcoded API Key (could trigger GitGuardian alerts)
+        const string API_KEY = "sk_live_1234567890abcdef";  // Sensitive API key
 
+        // Hardcoded password (could trigger GitGuardian alerts)
+        const string DB_PASSWORD = "P@ssw0rd123";  // Sensitive Database password
+
+        static async Task Main(string[] args)
+        {
+            // Hardcoded secret in plain text
+            string connectionString = "Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=P@ssw0rd123;";
+            Console.WriteLine("Attempting to connect to the database with password: " + DB_PASSWORD);
+
+            // Example of an insecure HTTP request (without SSL)
+            await MakeInsecureHttpRequest();
+        }
+
+        // Insecure HTTP request (could trigger GitGuardian alerts)
+        static async Task MakeInsecureHttpRequest()
+        {
+            var httpClient = new HttpClient();
+            var content = new StringContent("{\"example\":\"data\"}", Encoding.UTF8, "application/json");
+
+            try
+            {
+                // Insecure URL (without HTTPS)
+                HttpResponseMessage response = await httpClient.PostAsync("http://example.com/api/v1/resource", content);
+                string result = await response.Content.ReadAsStringAsync();
+                Console.WriteLine("Response: " + result);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+
+
+            
             Console.WriteLine("Hello, World!!");
             #region
             //Variables:
